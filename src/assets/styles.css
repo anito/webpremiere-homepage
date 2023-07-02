@@ -1,0 +1,20 @@
+@import './fonts/styles.css';
+
+html {
+	--tw-bg-opacity: 1;
+	--tw-text-opacity: 1;
+	-webkit-font-smoothing: antialiased;
+	font-family: Gotham A,Gotham B,sans-serif;
+	color: rgb(92 107 129/var(--tw-text-opacity));
+	scroll-behavior: smooth;
+	background-color: rgb(24 30 39/var(--tw-bg-opacity));
+}
+
+body {
+	line-height: inherit;
+	margin: 0;
+	padding: 0;
+}
+body, html {
+	height: 100%;
+}
