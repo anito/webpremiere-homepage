@@ -31,22 +31,22 @@
 
 <div use:addPane />
 
-<div class="canvas">
+<div class="bg-canvas">
 	<Canvas>
 		<Terrain />
 	</Canvas>
+</div>
+<div class="fg-canvas">
 	<Canvas>
 		<Filmgrain />
 	</Canvas>
 </div>
 
 <style lang="scss">
-	.canvas,
-	.canvas :global(canvas) {
-		--color-primary: rgb(20 20 20);
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		background-color: transparent;
+	.bg-canvas, .fg-canvas {
+		height: 100vh;
+    inset: 0;
+    position: fixed;
+    width: 100vw;
 	}
 </style>
