@@ -1,18 +1,18 @@
 <script>
-	import { T } from '@threlte/core';
-	import { interactivity, Grid, OrbitControls } from '@threlte/extras';
-	import { tweened } from 'svelte/motion';
-	import { elasticOut } from 'svelte/easing';
-	import { DEG2RAD } from 'three/src/math/MathUtils';
-	import Filmgrain from '$lib/components/Filmgrain.svelte';
+  import { T } from '@threlte/core';
+  import { interactivity, Grid, OrbitControls } from '@threlte/extras';
+  import { tweened } from 'svelte/motion';
+  import { elasticOut } from 'svelte/easing';
+  import { DEG2RAD } from 'three/src/math/MathUtils';
+  import Filmgrain from '$lib/components/Filmgrain.svelte';
 
-	// interactivity();
+  // interactivity();
 
-	const scale = tweened(0.5, { duration: 1000, easing: elasticOut });
+  const scale = tweened(0.5, { duration: 1000, easing: elasticOut });
 </script>
 
-<T.OrthographicCamera left={-1} right={1} top={1} bottom={-1} near={-1} far={0}>
-	<OrbitControls enabled={false} />
-</T.OrthographicCamera>
+<T.PerspectiveCamera aspect={window.innerWidth/window.innerHeight} near={0.1} far={1000} fov={75}>
+  <OrbitControls enabled={false} />
+</T.PerspectiveCamera>
 
 <Filmgrain />
